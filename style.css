@@ -680,3 +680,63 @@ header p {
     align-items: center;
   }
 }
+
+.terms-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.terms-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.terms-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.terms-container p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.terms-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  text-align: justify;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.terms-container {
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .terms-container {
+    max-width: 90%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-container {
+    max-width: 95%; /* Aumenta a largura em dispositivos muito pequenos */
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+}
+
+.footer {
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+}
