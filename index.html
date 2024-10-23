@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page - Desafio Frontend</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Logotipo</h1>
+        <div class="contact">
+          <a href="tel:+5548999999999" class="contact">(48) 9 9999-9999</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-container">
+        <div class="herotext">
+          <h2>
+            Aqui vai a sua headline.<br />Foque na transformação que seu produto
+            gera.
+          </h2>
+          <p>
+            Utilize esse subtítulo para complementar a sua headline com
+            informações que facilitem o entendimento do produto ou serviço que
+            você está oferecendo.
+          </p>
+        </div>
+        <form class="call-to-action">
+          <h2>Chamada para ação</h2>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="NOME:"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-mail:"
+            required
+          />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="DDD + Telefone:"
+            required
+          />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="COMO PODEMOS TE AJUDAR?"
+            required
+          ></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-container">
+        <div class="about-image-container">
+          <img
+            src="images/image.png"
+            alt="Descrição da Imagem"
+            class="about-image"
+          />
+        </div>
+        <div class="about-text-container">
+          <h3>Quem Somos</h3>
+          <p>
+            Conte aqui quem você é e como você ajuda as pessoas com seus
+            produtos ou serviços. Ao lado, use uma foto sua ou da sua empresa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="services-container">
+        <h2>Com este serviço você:</h2>
+        <div class="service-grid">
+          <div class="service-item">
+            <img
+              src="images/store-home-2-svgrepo-com.svg"
+              alt="Ícone do serviço 1"
+            />
+            <div class="service-text">
+              <h3>Benefício do serviço</h3>
+              <p>
+                Insira aqui a descrição do benefício que seu produto gera. Mais
+                tempo? Mais dinheiro? Economia? Durabilidade? Prazo de
+                atendimento? Preço?
+              </p>
+            </div>
+          </div>
+          <div class="service-item">
+            <img
+              src="images/store-home-2-svgrepo-com.svg"
+              alt="Ícone do serviço 2"
+            />
+            <div class="service-text">
+              <h3>Benefício do serviço</h3>
+              <p>
+                Insira aqui a descrição do benefício que seu produto gera. Mais
+                tempo? Mais dinheiro? Economia? Durabilidade? Prazo de
+                atendimento? Preço?
+              </p>
+            </div>
+          </div>
+          <div class="service-item">
+            <img
+              src="images/store-home-2-svgrepo-com.svg"
+              alt="Ícone do serviço 3"
+            />
+            <div class="service-text">
+              <h3>Benefício do serviço</h3>
+              <p>
+                Insira aqui a descrição do benefício que seu produto gera. Mais
+                tempo? Mais dinheiro? Economia? Durabilidade? Prazo de
+                atendimento? Preço?
+              </p>
+            </div>
+          </div>
+          <div class="service-item">
+            <img
+              src="images/store-home-2-svgrepo-com.svg"
+              alt="Ícone do serviço 4"
+            />
+            <div class="service-text">
+              <h3>Benefício do serviço</h3>
+              <p>Insira aqui a descrição do benefício que seu produto gera.</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <img
+              src="images/store-home-2-svgrepo-com.svg"
+              alt="Ícone do serviço 4"
+            />
+            <div class="service-text">
+              <h3>Benefício do serviço</h3>
+              <p>Insira aqui a descrição do benefício que seu produto gera.</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <img
+              src="images/store-home-2-svgrepo-com.svg"
+              alt="Ícone do serviço 4"
+            />
+            <div class="service-text">
+              <h3>Benefício do serviço</h3>
+              <p>Insira aqui a descrição do benefício que seu produto gera.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cta-button-container">
+          <button class="cta-button" onclick="scrollToServices()">
+            Veja os benefícios
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="faq-container">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+          <button class="faq-question">
+            Quando vou começar a ver o resultado das minhas campanhas?
+          </button>
+          <div class="faq-answer">
+            <p>
+              O resultado das campanhas pode variar dependendo de vários
+              fatores.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Quanto tempo dura a campanha?</button>
+          <div class="faq-answer">
+            <p>
+              Normalmente, uma campanha pode durar entre 4 a 6 semanas, mas pode
+              ser ajustada conforme as necessidades.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Posso alterar meu público-alvo?</button>
+          <div class="faq-answer">
+            <p>
+              Sim, você pode alterar o público-alvo a qualquer momento durante a
+              campanha.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-call">
+      <div class="final-call-container">
+        <div class="final-call-text">
+          <h2>Faça uma chamada final</h2>
+          <p>
+            Essa é uma chamada para ação final. Chegou até aqui e ainda não
+            cadastrou? Aproveite...
+          </p>
+        </div>
+        <div class="final-call-action">
+          <p>
+            Descrição chamando para uma última ação. Converse com nossa equipe
+            sem compromisso.
+          </p>
+          <button class="final-call-button" onclick="openModal()">
+            Mande uma mensagem
+          </button>
+          <small
+            >Nossos especialistas vão entrar em contato com você ainda
+            hoje.</small
+          >
+        </div>
+      </div>
+    </section>
+
+    <div id="finalModal" class="modal">
+      <div class="modal-content">
+        <span
+          class="close"
+          onclick="document.getElementById('finalModal').style.display='none'"
+          >&times;</span
+        >
+        <h2>Obrigado por sua ação!</h2>
+        <p>
+          Entraremos em contato em breve. Se precisar de mais informações,
+          preencha o formulário abaixo.
+        </p>
+        <form>
+          <input type="text" placeholder="Seu Nome" />
+          <input type="email" placeholder="Seu Email" />
+          <textarea placeholder="Sua Mensagem"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Nome da empresa &copy; Todos os Direitos Reservados - 2020
+      <p>CNPJ 99.999.999 - 0009-99 • TERMOS DE USO</p>
+    </footer>
+  </body>
+</html>
