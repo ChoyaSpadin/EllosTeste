@@ -841,13 +841,13 @@ header {
 }
 
 .terms-container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .terms-container h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  padding-top: 9rem;
 }
 
 .terms-container p {
@@ -865,10 +865,10 @@ header {
   overflow-y: auto;
 }
 
-.terms-container {
-  max-width: 800px;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+@media (max-width: 1340) {
+  .terms-container {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -876,6 +876,9 @@ header {
     max-width: 90%;
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+  .terms-container h2 {
+    padding-top: 3rem;
   }
 }
 
