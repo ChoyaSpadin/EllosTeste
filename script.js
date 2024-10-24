@@ -50,3 +50,29 @@ document
 document
   .querySelector(".final-call-button")
   .addEventListener("click", openModal);
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slides");
+
+  // Esconda todos os slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // Incrementa o índice do slide
+  slideIndex++;
+
+  // Se o índice for maior que o número de slides, reinicie para o primeiro slide
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  // Mostra o slide atual
+  slides[slideIndex - 1].style.display = "block";
+
+  // Chama a função novamente após 3 segundos
+  setTimeout(showSlides, 3000);
+}
