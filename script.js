@@ -137,6 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Vira a seta
+  document.querySelectorAll(".faq-question").forEach((item) => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+
   // FAQ - IntersectionObserver para animações de exibição dos itens de FAQ ao entrarem na tela
   const faqObserver = new IntersectionObserver(
     (entries) => {

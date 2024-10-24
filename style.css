@@ -35,6 +35,11 @@ header {
   background-color: var(--main-bg-color);
   color: #fff;
   text-align: -webkit-center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .header-content {
@@ -44,16 +49,16 @@ header {
   justify-content: space-between;
 }
 
-header h1 {
-  font-size: 2rem;
+.header-content h1 {
+  cursor: pointer;
 }
 
-header h3 {
+.header h3 {
   font-size: 2rem;
   margin: 0;
 }
 
-header p {
+.header p {
   margin-top: 10px;
   font-size: 1.2rem;
 }
@@ -70,7 +75,7 @@ header p {
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 1rem 0;
+    padding: 1rem;
   }
 
   .header-content {
@@ -103,6 +108,7 @@ header p {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 3rem;
 }
 
 .hero-container {
@@ -586,7 +592,11 @@ header p {
 }
 
 .faq-question.active::after {
-  transform: translateY(-50%) rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.faq-question p {
+  max-width: 95%;
 }
 
 .faq-answer {
@@ -672,6 +682,13 @@ header p {
   display: block;
   font-size: var(--font-small-text);
   margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-question::after {
+    font-size: 1rem; /* Tamanho menor para o mobile */
+    right: 15px; /* Ajuste o espaçamento em relação à borda */
+  }
 }
 
 .modal {
