@@ -441,7 +441,7 @@ header p {
   .service-grid {
     grid-template-columns: repeat(1, 1fr);
     float: left;
-    padding-left: 2rem;
+    padding: 2rem;
     min-width: 100%;
   }
 }
