@@ -16,11 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Função para rolar suavemente até a seção de serviços
-function scrollToServices() {
-  document.getElementById("services").scrollIntoView({ behavior: "smooth" });
-}
-
 // Função para abrir o modal
 function openModal() {
   document.getElementById("finalModal").style.display = "block";
@@ -41,15 +36,17 @@ window.onclick = function (event) {
   }
 };
 
-// Adiciona o evento de clique no botão "Veja os benefícios" para rolar até a seção de serviços
-document
-  .querySelector(".cta-button")
-  .addEventListener("click", scrollToServices);
-
 // Adiciona o evento de clique no botão "Mande uma mensagem" para abrir o modal
 document
   .querySelector(".final-call-button")
   .addEventListener("click", openModal);
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
 
 let slideIndex = 0;
 showSlides();
@@ -76,3 +73,26 @@ function showSlides() {
   // Chama a função novamente após 3 segundos
   setTimeout(showSlides, 3000);
 }
+
+const items = document.querySelectorAll(".service-item");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Aplicar delay crescente baseado no índice
+        setTimeout(() => {
+          entry.target.classList.add("show");
+        }, index * 200); // Atraso de 200ms entre cada item
+      } else {
+        // Se quiser que a animação seja repetida ao sair da viewport
+        entry.target.classList.remove("show");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+items.forEach((item) => {
+  observer.observe(item);
+});
