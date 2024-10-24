@@ -1,11 +1,9 @@
-// Evento de DOMContentLoaded para inicializar o FAQ
 document.addEventListener("DOMContentLoaded", () => {
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {
     const question = item.querySelector(".faq-question");
 
-    // Adiciona o evento de clique para abrir/fechar a resposta da FAQ
     question.addEventListener("click", () => {
       item.classList.toggle("active");
       const answer = item.querySelector(".faq-answer");
@@ -16,31 +14,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Função para abrir o modal
 function openModal() {
   document.getElementById("finalModal").style.display = "block";
 }
 
-// Função para fechar o modal
 function closeModal() {
   document.getElementById("finalModal").style.display = "none";
 }
 
-// Fechar o modal ao clicar no 'x'
 document.querySelector(".close").addEventListener("click", closeModal);
 
-// Fechar o modal ao clicar fora da área de conteúdo
 window.onclick = function (event) {
   if (event.target == document.getElementById("finalModal")) {
     closeModal();
   }
 };
 
-// Adiciona o evento de clique no botão "Mande uma mensagem" para abrir o modal
 document
   .querySelector(".final-call-button")
   .addEventListener("click", openModal);
 
+// eslint-disable-next-line no-unused-vars
 function scrollToTop() {
   window.scrollTo({
     top: 0,
@@ -54,23 +48,18 @@ showSlides();
 function showSlides() {
   let slides = document.getElementsByClassName("slides");
 
-  // Esconda todos os slides
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
-  // Incrementa o índice do slide
   slideIndex++;
 
-  // Se o índice for maior que o número de slides, reinicie para o primeiro slide
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
 
-  // Mostra o slide atual
   slides[slideIndex - 1].style.display = "block";
 
-  // Chama a função novamente após 3 segundos
   setTimeout(showSlides, 3000);
 }
 
@@ -80,12 +69,10 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        // Aplicar delay crescente baseado no índice
         setTimeout(() => {
           entry.target.classList.add("show");
-        }, index * 200); // Atraso de 200ms entre cada item
+        }, index * 200);
       } else {
-        // Se quiser que a animação seja repetida ao sair da viewport
         entry.target.classList.remove("show");
       }
     });
@@ -95,4 +82,27 @@ const observer = new IntersectionObserver(
 
 items.forEach((item) => {
   observer.observe(item);
+});
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+const faqObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("show");
+        }, index * 200);
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+faqItems.forEach((item) => {
+  faqObserver.observe(item);
 });
