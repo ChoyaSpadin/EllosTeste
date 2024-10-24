@@ -4,9 +4,11 @@ https://choyaspadin.github.io/EllosTeste/
 
 ## Tecnologias utilizadas
 
-- **HTML5**
-- **CSS3**
-- **JavaScript (ES6+)**
+## Tecnologias Utilizadas
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript (ES6+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 
 ## Pré-requisitos
 
