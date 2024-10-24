@@ -1,6 +1,6 @@
 # EllosTeste
 
-Este é um projeto de teste para demonstrar efeitos de carrossel, perguntas frequentes (FAQ) interativas e animações para serviços em uma página HTML.
+https://choyaspadin.github.io/EllosTeste/
 
 ## Tecnologias utilizadas
 
